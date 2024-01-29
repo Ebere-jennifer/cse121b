@@ -17,23 +17,43 @@ function addNumbers() {
 document.querySelector("#addNumbers").addEventListener("click", addNumbers);
 
 /* Function Expression - Subtract Numbers */
-function subtract(number1, number2) {
-  // Function body: Return the sum of number1 and number2
+// function subtract(number1, number2) {
+//   // Function body: Return the sum of number1 and number2
+//   return number1 - number2;
+// }
+
+// function subtractNumbers() {
+//   let subtractNumber1 = Number(document.querySelector("#subtract1").value);
+//   let subtractNumber2 = Number(document.querySelector("#subtract2").value);
+
+//   document.querySelector("#difference").value = subtract(
+//     subtractNumber1,
+//     subtractNumber2
+//   );
+// }
+
+// document
+//   .querySelector("#subtractNumbers")
+//   .addEventListener("click", subtractNumbers);
+
+// Function expression for subtraction
+const subtract = function (number1, number2) {
   return number1 - number2;
-}
+};
 
-function subtractNumbers() {
-  let subtractNumber1 = Number(document.querySelector("#subtract1").value);
-  let subtractNumber2 = Number(document.querySelector("#subtract2").value);
+// Function expression for handling subtraction and updating the result
+const subtractNumbers = function () {
+  // Get input values
+  const number1 = parseFloat(document.getElementById("subtract1").value);
+  const number2 = parseFloat(document.getElementById("subtract2").value);
 
-  document.querySelector("#difference").value = subtract(
-    subtractNumber1,
-    subtractNumber2
-  );
-}
+  // Display the result
+  document.getElementById("difference").value = subtract(number1, number2);
+};
 
+// Attach event listener to the button
 document
-  .querySelector("#subtractNumbers")
+  .getElementById("subtractNumbers")
   .addEventListener("click", subtractNumbers);
 
 /* Arrow Function - Multiply Numbers */
