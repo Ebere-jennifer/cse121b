@@ -17,24 +17,6 @@ function addNumbers() {
 document.querySelector("#addNumbers").addEventListener("click", addNumbers);
 
 /* Function Expression - Subtract Numbers */
-// function subtract(number1, number2) {
-//   // Function body: Return the sum of number1 and number2
-//   return number1 - number2;
-// }
-
-// function subtractNumbers() {
-//   let subtractNumber1 = Number(document.querySelector("#subtract1").value);
-//   let subtractNumber2 = Number(document.querySelector("#subtract2").value);
-
-//   document.querySelector("#difference").value = subtract(
-//     subtractNumber1,
-//     subtractNumber2
-//   );
-// }
-
-// document
-//   .querySelector("#subtractNumbers")
-//   .addEventListener("click", subtractNumbers);
 
 // Function expression for subtraction
 const subtract = function (number1, number2) {
